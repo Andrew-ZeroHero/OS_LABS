@@ -10,47 +10,34 @@ void MyDraw(HWND h) {
     HBRUSH b_yellow = CreateSolidBrush(RGB(255, 255, 0));
     HBRUSH b_orange = CreateSolidBrush(RGB(255, 102, 0));
 
-    POINT pt_up[3] = { {350, 150}, {400, 50}, {450, 150} }; // Нос ракеты
+    POINT pt_up[3] = { {350, 150}, {400, 50}, {450, 150} };             // Нос ракеты
     SelectObject(dc, b_red); Polygon(dc, pt_up, 3);
-
-    POINT pt_left_wing[3] = { {300, 370}, {350, 250}, {350, 370} }; // Левое крыло
+    POINT pt_left_wing[3] = { {300, 370}, {350, 250}, {350, 370} };     // Левое крыло
     SelectObject(dc, b_red); Polygon(dc, pt_left_wing, 3);
-
-    POINT pt_right_wing[3] = { {450, 250}, {500, 370}, {450, 370} }; // Правое крыло
+    POINT pt_right_wing[3] = { {450, 250}, {500, 370}, {450, 370} };    // Правое крыло
     SelectObject(dc, b_red); Polygon(dc, pt_right_wing, 3);
-
-    SelectObject(dc, b_grey); Rectangle(dc, 350, 150, 450, 400); // Корпус
-
-    SelectObject(dc, b_blue); Ellipse(dc, 375, 250, 425, 300); // Иллюминаторы
+    SelectObject(dc, b_grey); Rectangle(dc, 350, 150, 450, 400);        // Корпус
+    SelectObject(dc, b_blue); Ellipse(dc, 375, 250, 425, 300);          // Иллюминаторы
     SelectObject(dc, b_blue); Ellipse(dc, 375, 325, 425, 375);
-
-    SelectObject(dc, b_white); Rectangle(dc, 370, 175, 430, 190); // Флаг России
-    SelectObject(dc, b_blue); Rectangle(dc, 370, 190, 430, 205);
-    SelectObject(dc, b_red); Rectangle(dc, 370, 205, 430, 220);
-
-    POINT pt_left_turbine[3] = { {350, 450}, {375, 400}, {400, 450} }; // Левая турбина
+    POINT pt_left_turbine[3] = { {350, 450}, {375, 400}, {400, 450} };  // Левая турбина
     SelectObject(dc, b_red); Polygon(dc, pt_left_turbine, 3);
     POINT pt_right_turbine[3] = { {400, 450}, {425, 400}, {450, 450} }; // Правая турбина
     SelectObject(dc, b_red); Polygon(dc, pt_right_turbine, 3);
-
-    POINT pt_left_fire[3] = { {355, 450}, {375, 480}, {395, 450} }; // Огонь
+    POINT pt_left_fire[3] = { {355, 450}, {375, 480}, {395, 450} };     // Огонь
     SelectObject(dc, b_orange); Polygon(dc, pt_left_fire, 3);
     POINT pt_right_fire[3] = { {405, 450}, {425, 480}, {445, 450} };
     SelectObject(dc, b_orange); Polygon(dc, pt_right_fire, 3);
-
-    POINT pt_left_fire_y[3] = { {363, 450}, {375, 475}, {387, 450} }; // Тоже огонь
+    POINT pt_left_fire_y[3] = { {363, 450}, {375, 475}, {387, 450} };
     SelectObject(dc, b_yellow); Polygon(dc, pt_left_fire_y, 3);
     POINT pt_right_fire_y[3] = { {413, 450}, {425, 475}, {437, 450} };
     SelectObject(dc, b_yellow); Polygon(dc, pt_right_fire_y, 3);
-
-    SelectObject(dc, b_white); Ellipse(dc, 100, 100, 105, 105); // Звезды
+    SelectObject(dc, b_white); Ellipse(dc, 100, 100, 105, 105);         // Звезды
     Ellipse(dc, 123, 123, 128, 128); Ellipse(dc, 715, 85, 720, 90);
     Ellipse(dc, 500, 600, 505, 605); Ellipse(dc, 224, 433, 229, 438);
     Ellipse(dc, 535, 440, 540, 445); Ellipse(dc, 415, 545, 420, 550);
     Ellipse(dc, 300, 95, 305, 100); Ellipse(dc, 698, 612, 703, 617);
     Ellipse(dc, 175, 460, 180, 465); Ellipse(dc, 600, 333, 605, 338);
-
-    SelectObject(dc, b_yellow); Ellipse(dc, 625, 225, 700, 300); // Солнце
+    SelectObject(dc, b_yellow); Ellipse(dc, 625, 225, 700, 300);        // Солнце
 
     DeleteObject(b_red); DeleteObject(b_blue); // удалить кисти
     DeleteObject(b_white); DeleteObject(b_grey);
