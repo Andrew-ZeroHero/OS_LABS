@@ -35,7 +35,6 @@ void MyDraw(HWND h) {
     SelectObject(dc, white);
     Ellipse(dc, 488, 380, 410, 342);
     Ellipse(dc, 460, 370, 395, 290);
-    
 }
 
 LONG WINAPI WndProc(HWND hwnd, UINT message, WPARAM wparam, LPARAM lparam)
