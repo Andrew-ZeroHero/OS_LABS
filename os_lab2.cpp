@@ -5,7 +5,6 @@
 #include <stdlib.h>
 
 using namespace std;
-
 CRITICAL_SECTION cs1, cs2, cs3, cs4, cs5, cs6, cs7;
 DWORD t1, t2, t3, t4;
 
